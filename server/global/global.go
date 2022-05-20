@@ -27,9 +27,8 @@ var (
 	GVA_LOG                 *zap.Logger
 	GVA_Timer               timer.Timer = timer.NewTimerTask()
 	GVA_Concurrency_Control             = &singleflight.Group{}
-
-	BlackCache local_cache.Cache
-	lock       sync.RWMutex
+	BlackCache              local_cache.Cache
+	lock                    sync.RWMutex
 )
 
 // GetGlobalDBByDBName 通过名称获取db list中的db
